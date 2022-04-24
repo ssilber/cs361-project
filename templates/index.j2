@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class='center-text'>Select a club to learn about them</h1>
+</div>
+
+<div class="container text-center">
+    <form method="POST" action="{{ url_for('selected_club') }}">
+        <div class="mb-3 input center">
+            <select name="club" class="form-control center" id="club" required>
+                <option disabled selected value class="center"> -- see full club list -- </option>
+                {% for club in clubs %}
+                <option value="{{club.name}}">{{club.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" id="selectClub" name="selectClub" class="btn btn-primary">Go</button>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for club in clubs %}
+        <div class="container">
+            <div class="col">
+                <div class="card mx-auto club-card" id="{{club.name}}">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">{{club.name}}</h5>
+                    </div>
+                    <img src="{{club.image_url}}" class="card-img-top mx-auto" loading="lazy">
+                    <!-- <a href="#" class="btn btn-primary stretched-link hidden">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+</div>
+{% endblock %}

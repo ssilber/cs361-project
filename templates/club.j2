@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %}
+{% block title %}Club Page{% endblock %}
+{% block content %}
+
+{% if club %}
+<div class="container center-text">
+    <h2> {{club.name}} </h2>
+</div>
+
+<div class="container center">
+    <div class="col">
+        <div class="card center">
+            <div class="card-body">
+                <img src="{{club.image_url}}" class="card-img-top">
+                <h5> <u>Club Info: </u></h5>
+                <p> Location: {{club.city}} </p>
+                <p> Stadium: {{club.stadium_name}} </p>
+                <p> Year Founded: {{club.year_founded}} </p>
+                <br>
+                <h5> <u>Past Performance: </u></h5>
+                {% for year in club.standings.items() %}
+                <p> {{year[0]}}: {{year[1]}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% else %}
+<h2>This club is not currently in the database.</h2>
+{% endif %}
+{% endblock %}

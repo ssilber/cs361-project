@@ -1,0 +1,22 @@
+.card-img-top {
+    width: 100px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.highlight {
+    background-color: rgb(144, 200, 144);
+}
+
+.club-card:hover {
+    opacity: 0.5
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.center-text {
+    text-align: center;
+}
