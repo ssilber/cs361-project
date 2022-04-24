@@ -18,9 +18,27 @@
                 <p> Year Founded: {{club.year_founded}} </p>
                 <br>
                 <h5> <u>Past Performance: </u></h5>
-                {% for year in club.standings.items() %}
-                <p> {{year[0]}}: {{year[1]}}</p>
-                {% endfor %}
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h5>Year</h5>
+                            </th>
+                            <th>
+                                <h5>Rank</h5>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for year in club.standings.items() %}
+                        <tr>
+                            <td> {{year[0]}} </td>
+                            <td> {{year[1]}} </td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
