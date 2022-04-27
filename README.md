@@ -2,7 +2,7 @@
 Project for CS 361 (Software Engineering I) at Oregon State University
 
 ## Prerequisites
-Have [Docker] (https://docs.docker.com/get-docker/) downloaded
+Have [Docker](https://docs.docker.com/get-docker/) downloaded
 
 ## Running the application
 Using make
