@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    command: python app.py
+    ports:
+      - "5000:5000"
