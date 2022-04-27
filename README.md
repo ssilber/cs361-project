@@ -10,6 +10,8 @@ Using make
 make app
 ```
 
+or
+
 Using docker compose directly
 ```bash
 docker compose up
