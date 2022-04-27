@@ -17,4 +17,4 @@ Using docker compose directly
 docker compose up
 ```
 
-Then, open up your browser to localhost:5000
+Then, open up your browser to ``localhost:5000``
