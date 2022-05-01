@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 
 from common import clubs
 
@@ -17,15 +17,17 @@ def root():
 @app.route("/club/<club_submitted>")
 def selected_club(club_submitted):
 
-        club_object = None
-        for club in clubs:
-            if club.name == club_submitted:
-                club_object = club
-        return render_template("club.j2", club=club_object)
+    club_object = None
+    for club in clubs:
+        if club.name == club_submitted:
+            club_object = club
+    return render_template("club.j2", club=club_object)
+
+
+@app.route("/api/clubs")
+def api():
+    return jsonify(clubs)
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-
-
-
