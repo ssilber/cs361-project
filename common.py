@@ -8,7 +8,7 @@ clubs_dict = [
         "year_founded": 1892,
         "stadium_name": "Anfield",
         "image_url": "/static/images/liverpool_crest.png",
-        "standings": {"2021": 3, "2020": 1, "2019": 2}
+        "standings": {"2021": 3, "2020": 1, "2019": 2},
     },
     {
         "name": "Chelsea",
@@ -17,7 +17,7 @@ clubs_dict = [
         "year_founded": 1905,
         "stadium_name": "Stamford Bridge",
         "image_url": "/static/images/chelsea_crest.png",
-        "standings": {"2021": 4, "2020": 4, "2019": 3}
+        "standings": {"2021": 4, "2020": 4, "2019": 3},
     },
     {
         "name": "Juventus",
@@ -26,7 +26,7 @@ clubs_dict = [
         "year_founded": 1897,
         "stadium_name": "Allianz Stadium",
         "image_url": "/static/images/juventus_crest.png",
-        "standings": {"2021": 4, "2020": 1, "2019": 1}
+        "standings": {"2021": 4, "2020": 1, "2019": 1},
     },
     {
         "name": "Inter Milan",
@@ -35,7 +35,7 @@ clubs_dict = [
         "year_founded": 1908,
         "stadium_name": "San Siro",
         "image_url": "/static/images/inter_milan_crest.png",
-        "standings": {"2021": 1, "2020": 2, "2019": 4}
+        "standings": {"2021": 1, "2020": 2, "2019": 4},
     },
     {
         "name": "Paris Saint-Germain",
@@ -44,7 +44,7 @@ clubs_dict = [
         "year_founded": 1970,
         "stadium_name": "Parc des Princes",
         "image_url": "/static/images/psg_crest.png",
-        "standings": {"2021": 2, "2020": 1, "2019": 1}
+        "standings": {"2021": 2, "2020": 1, "2019": 1},
     },
     {
         "name": "Marseille",
@@ -53,7 +53,7 @@ clubs_dict = [
         "year_founded": 1899,
         "stadium_name": "Stade Vélodrome",
         "image_url": "/static/images/marseille_crest.png",
-        "standings": {"2021": 5, "2020": 2, "2019": 5}
+        "standings": {"2021": 5, "2020": 2, "2019": 5},
     },
     {
         "name": "Barcelona",
@@ -62,7 +62,7 @@ clubs_dict = [
         "year_founded": 1925,
         "stadium_name": "Camp Nou",
         "image_url": "/static/images/barcelona_crest.png",
-        "standings": {"2021": 3, "2020": 2, "2019": 1}
+        "standings": {"2021": 3, "2020": 2, "2019": 1},
     },
     {
         "name": "Real Madrid",
@@ -71,7 +71,7 @@ clubs_dict = [
         "year_founded": 1902,
         "stadium_name": "Santiago Bernabéu Stadium",
         "image_url": "/static/images/real_madrid_crest.png",
-        "standings": {"2021": 2, "2020": 1, "2019": 3}
+        "standings": {"2021": 2, "2020": 1, "2019": 3},
     },
     {
         "name": "Bayern Munich",
@@ -80,7 +80,7 @@ clubs_dict = [
         "year_founded": 1900,
         "stadium_name": "Allianz Arena",
         "image_url": "/static/images/bayern_munich_crest.png",
-        "standings": {"2021": 1, "2020": 1, "2019": 1}
+        "standings": {"2021": 1, "2020": 1, "2019": 1},
     },
     {
         "name": "Borussia Dortmund",
@@ -89,7 +89,7 @@ clubs_dict = [
         "year_founded": 1909,
         "stadium_name": "Westfalenstadion",
         "image_url": "/static/images/bvb_crest.png",
-        "standings": {"2021": 3, "2020": 2, "2019": 2}
+        "standings": {"2021": 3, "2020": 2, "2019": 2},
     },
 ]
 
