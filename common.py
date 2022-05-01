@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+MICROSERVICE_FILEPATH = "test.txt"
+
 clubs_dict = [
     {
         "name": "Liverpool",
@@ -116,3 +118,9 @@ def create_club_list(club_list: list[dict[str, str]]) -> list[Club]:
 
 
 clubs = create_club_list(club_list=clubs_dict)
+
+
+def read_file(filepath: str) -> str:
+    with open(filepath, "r") as f:
+        line = f.readline()
+        return line

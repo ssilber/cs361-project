@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, render_template, request, redirect, url_for
 
-from common import clubs
+from common import clubs, MICROSERVICE_FILEPATH, read_file
 
 app = Flask(__name__)
 
@@ -8,8 +8,13 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def root():
     if request.method == "POST":
-        club_submitted = request.form.get("club")
-        return redirect(url_for("selected_club", club_submitted=club_submitted))
+        if "selectClub" in request.form:
+            club_submitted = request.form.get("club")
+            return redirect(url_for("selected_club", club_submitted=club_submitted))
+        elif "randomClub" in request.form:
+            # TODO: Write to file to activate microservice, wait a bit
+            club_generated = read_file(filepath=MICROSERVICE_FILEPATH)
+            return redirect(url_for("selected_club", club_submitted=club_generated))
 
     return render_template("index.j2", clubs=clubs)
 
