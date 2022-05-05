@@ -1,6 +1,14 @@
+from time import sleep
+
 from flask import Flask, jsonify, render_template, request, redirect, url_for
 
-from common import clubs, MICROSERVICE_FILEPATH, read_file
+from common import (
+    clubs,
+    MICROSERVICE_FILEPATH,
+    MICROSERVICE_REQUEST_TEXT,
+    read_file,
+    write_string_to_file,
+)
 
 app = Flask(__name__)
 
@@ -12,7 +20,11 @@ def root():
             club_submitted = request.form.get("club")
             return redirect(url_for("selected_club", club_submitted=club_submitted))
         elif "randomClub" in request.form:
-            # TODO: Write to file to activate microservice, wait a bit
+            write_string_to_file(
+                filepath=MICROSERVICE_FILEPATH, string=MICROSERVICE_REQUEST_TEXT
+            )
+            # TODO: determine if 2 seconds is too long/short
+            sleep(2)
             club_generated = read_file(filepath=MICROSERVICE_FILEPATH)
             return redirect(url_for("selected_club", club_submitted=club_generated))
 

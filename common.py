@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
 MICROSERVICE_FILEPATH = "microservice.txt"
+MICROSERVICE_REQUEST_TEXT = "GET"
 
 clubs_dict = [
     {
@@ -124,3 +125,8 @@ def read_file(filepath: str) -> str:
     with open(filepath, "r") as f:
         line = f.readline()
         return line
+
+
+def write_string_to_file(filepath: str, string: str):
+    with open(filepath, "w") as f:
+        f.write(string)
