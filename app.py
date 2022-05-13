@@ -23,8 +23,7 @@ def root():
             write_string_to_file(
                 filepath=MICROSERVICE_FILEPATH, string=MICROSERVICE_REQUEST_TEXT
             )
-            # TODO: determine if 2 seconds is too long/short
-            sleep(2)
+            sleep(1)
             club_generated = read_file(filepath=MICROSERVICE_FILEPATH)
             return redirect(url_for("selected_club", club_submitted=club_generated))
 
