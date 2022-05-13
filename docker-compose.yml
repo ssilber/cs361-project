@@ -6,3 +6,8 @@ services:
       - "5000:5000"
     volumes:
       - ./:/project
+  microservice:
+    build: .
+    command: python microservice.py
+    volumes:
+      - ./:/project
